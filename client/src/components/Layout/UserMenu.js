@@ -1,39 +1,56 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 const AdminMenu = () => {
-    return (
-        <>
-            <div className="text-center">
-                <div className="list-group">
-                    <h4>Admin Panel</h4>
-                    <NavLink
-                        to="/dashboard/admin/create-category"
-                        className="list-group-item list-group-item-action"
-                    >
-                        Create Category
-                    </NavLink>
-                    <NavLink
-                        to="/dashboard/admin/create-product"
-                        className="list-group-item list-group-item-action"
-                    >
-                        Create Product
-                    </NavLink>
-                    <NavLink
-                        to="/dashboard/admin/products"
-                        className="list-group-item list-group-item-action"
-                    >
-                        Products
-                    </NavLink>
-                    <NavLink
-                        to="/dashboard/admin/users"
-                        className="list-group-item list-group-item-action"
-                    >
-                        Users
-                    </NavLink>
-                </div>
-            </div>
-        </>
-    );
+  return (
+    <div className="">
+      <div className="">
+        <div className="list-group">
+          <h4 className="container-flui p-3 dash">Dashboard</h4>
+          <div className="profileorder">
+          <NavLink
+            to="/dashboard/user/profile"
+            className="list-group-item list-group-item-action"
+          >
+            Profile
+          </NavLink>
+          <NavLink
+            to="/dashboard/user/orders"
+            className="list-group-item list-group-item-action"
+          >
+            Orders
+          </NavLink>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 };
 
-export default AdminMenu;
+export default AdminMenu; 
+// import React from "react";
+// import { NavLink } from "react-router-dom";
+// const UserMenu = () => {
+//   return (
+//     <div>
+//       <div className="text-center dashboard-menu">
+//         <div className="list-group">
+//           <h4>Dashboard</h4>
+//           <NavLink
+//             to="/dashboard/user/profile"
+//             className="list-group-item list-group-item-action"
+//           >
+//             Profile
+//           </NavLink>
+//           <NavLink
+//             to="/dashboard/user/orders"
+//             className="list-group-item list-group-item-action"
+//           >
+//             Orders
+//           </NavLink>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default UserMenu;

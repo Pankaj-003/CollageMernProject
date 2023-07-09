@@ -31,8 +31,8 @@ const Search = () => {
                   <p className="card-text">
                     {p.description.substring(0, 30)}...
                   </p>
-                  <p className="card-text"> $ {p.price}</p>
-                  <button class="btn btn-primary ms-1" onClick={() => navigate(`/product/${p.slug}`)}>More Details</button>
+                  <p className="card-text">  &#8377; {p.price}</p>
+                  <button class="btn btn-primary" onClick={() => navigate(`/product/${p.slug}`)}>Details</button>
                   <button class="btn btn-secondary ms-1" onClick={() => {
                     setCart([...cart, p])
                     toast.success('Item Added to Cart')

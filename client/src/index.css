@@ -355,9 +355,11 @@ a {
 =================== */
 
 
-.pa{
-  /* border: 1px solid red; */
-  width: 160px;
+.dash{
+
+  background-color: #434343;
+  color: white;
+
 }
 .pa-d{
   padding-left: 10px;
@@ -378,6 +380,22 @@ a {
   color: white;
   padding: 20px 0px;
   /* border: 1px solid red; */
+}
+.dashboard{
+  /* border: 1px solid red; */
+  width: 1320px;
+  margin: 0 auto;
+
+}
+.AdminMaindash{
+  /* border: 1px solid blue; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dashboardheadmain{
+  /* border: 1px solid brown; */
+  padding: 0 100px;
 }
 /* =================All Categoery Page========================= */
 .All-Cat-btn{
@@ -939,8 +957,13 @@ a {
   display: block;
 }
 /* ====================================================================================================================================================================================================================================================================================order section desighn start ==========================================================================================================================================================================================================================================*/
-
-
+.ant-checkbox-wrapper:first-of-type {
+  margin-left: 0px;
+}
+.btn-info {
+  --bs-btn-bg: #336699;
+  border: transparent;
+}
 
 
 
