@@ -964,12 +964,30 @@ a {
   --bs-btn-bg: #336699;
   border: transparent;
 }
+.comparemainbuttonbox{
+  /* border: 1px solid red; */
+  position: absolute;
+  top: 0;
+  /* left: 0; */
+  right: 0;
+  top: 15px;
+  }
+  .c{
+    /* border: 1px solid rgb(221, 236, 5); */
+position: relative;
+  }
+.comparemainbutton{
+/* border: 1px solid rgb(74, 3, 133); */
+margin-right: 10px;
+background-color: transparent;
+color: #336699;
+border: none;
+display: none;
+}
 
-
-
-
-
-
+.c:hover .comparemainbutton {
+  display: block;
+}
 
 
 

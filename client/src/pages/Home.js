@@ -15,7 +15,55 @@ import axios from "axios";
 // import { Prices } from "../components/Price";
 import { useCart } from "../context/cart";
 import { toast } from "react-hot-toast";
+import { FiCompare } from 'react-icons/fi';
+
 const Home = () => {
+  
+    const [mapVisible, setMapVisible] = useState(false);
+  
+    const toggleMap = () => {
+      setMapVisible(!mapVisible);
+    };
+  
+    const closeMap = () => {
+      setMapVisible(false);
+    };
+  
+    const mapContainerStyle = {
+      position: 'fixed',
+      top: 0,
+      left: 0,
+      width: '100%',
+      height: '100%',
+      zIndex: 9999,
+      display: mapVisible ? 'block' : 'none',
+      backdropFilter: 'blur(5px)',
+    };
+  
+    const mapOverlayStyle = {
+      position: 'relative',
+      height: '100%',
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+    };
+  
+    const mapIframeStyle = {
+      width: '80%',
+      height: '80%',
+    };
+  
+    const closeButtonStyle = {
+      position: 'absolute',
+      top: '10px',
+      right: '10px',
+      fontSize: '20px',
+      color: 'white',
+      backgroundColor: 'rgba(0, 0, 0, 0.5)',
+      padding: '5px',
+      borderRadius: '50%',
+      cursor: 'pointer',
+    };
   
       
  
@@ -919,14 +967,14 @@ const Home = () => {
                                 <div class="tab-pane fade show active" id="pills-arrivals" role="tabpanel"
                                     aria-labelledby="pills-arrivals-tab">
                                     <ul class="d-flex">
-                                        <li class="order-lg-0">
+                                        <li class="order-lg-0 c">
                                             <div class="d-item_img">
                                                 <img class="img-fluid w-100" src="images/index/D-1.jpg" alt="D-1"/>
                                                 <img class="img-fluid w-100 d_item_hover_img"
                                                     src="images/index/D-1.1.jpg" alt="D-1.1"/>
                                                
                                             </div>
-                                            <div class="d-item_text">
+                                            <div class="d-item_text ">
                                                 <a href="#">Classic Hat</a>
                                                 <div class="review">
                                                     <a href="#"><i class="fas fa-star"></i></a>
@@ -937,9 +985,31 @@ const Home = () => {
                                                     <a href="#">(1 Review)</a>
                                                 </div>
                                                 <p>&#8377;53.00</p>
+                                                {/* ///////////////////////////// */}
+                                                <div className='comparemainbuttonbox'>
+        {/* <h1>Google Maps Button</h1> */}
+        <button onClick={toggleMap} className='comparemainbutton'><i class="fas fa-balance-scale"></i></button>
+        <div style={mapContainerStyle} className="map-container-com">
+          <div style={mapOverlayStyle} className="map-overlay-com">
+            <iframe
+              style={mapIframeStyle}
+              src="https://pricehistoryapp.com/embed/apple-iphone-12-64gb-white-bc26"
+              frameBorder="0"
+              allowTransparency="true"
+              scrolling="no"
+            ></iframe>
+            <span style={closeButtonStyle} onClick={closeMap}>
+              &times;
+            </span>
+          </div>
+        </div>
+  
+       
+      </div>
+ {/* //////////////////////////////////////////////////////////////// */}
                                             </div>
                                         </li>
-                                        <li class="order-lg-1">
+                                        <li class="order-lg-1 c">
                                             <div class="d-item_img">
                                                 <img class="img-fluid w-100" src="images/index/D-2.jpg" alt="D-2"/>
                                                 
@@ -955,9 +1025,31 @@ const Home = () => {
                                                     <a href="#">(3 Review)</a>
                                                 </div>
                                                 <p>&#8377;26.62</p>
+                                                                                                {/* ///////////////////////////// */}
+                                                                                                <div className='comparemainbuttonbox'>
+        {/* <h1>Google Maps Button</h1> */}
+        <button onClick={toggleMap} className='comparemainbutton'><i class="fas fa-balance-scale"></i></button>
+        <div style={mapContainerStyle} className="map-container-com">
+          <div style={mapOverlayStyle} className="map-overlay-com">
+            <iframe
+              style={mapIframeStyle}
+              src="https://pricehistoryapp.com/embed/apple-iphone-12-64gb-white-bc26"
+              frameBorder="0"
+              allowTransparency="true"
+              scrolling="no"
+            ></iframe>
+            <span style={closeButtonStyle} onClick={closeMap}>
+              &times;
+            </span>
+          </div>
+        </div>
+  
+       
+      </div>
+ {/* //////////////////////////////////////////////////////////////// */}
                                             </div>
                                         </li>
-                                        <li class="order-lg-2">
+                                        <li class="order-lg-2 c">
                                             <div class="d-item_img">
                                                 <img class="img-fluid w-100" src="images/index/D-3.jpg" alt="D-3"/>
                                                 
@@ -974,9 +1066,31 @@ const Home = () => {
                                                     <a href="#">(5 Review)</a>
                                                 </div>
                                                 <p>&#8377;136.26 <del>&#8377;145.90</del></p>
+                                                                                                {/* ///////////////////////////// */}
+                                                                                                <div className='comparemainbuttonbox'>
+        {/* <h1>Google Maps Button</h1> */}
+        <button onClick={toggleMap} className='comparemainbutton'><i class="fas fa-balance-scale"></i></button>
+        <div style={mapContainerStyle} className="map-container-com">
+          <div style={mapOverlayStyle} className="map-overlay-com">
+            <iframe
+              style={mapIframeStyle}
+              src="https://pricehistoryapp.com/embed/apple-iphone-12-64gb-white-bc26"
+              frameBorder="0"
+              allowTransparency="true"
+              scrolling="no"
+            ></iframe>
+            <span style={closeButtonStyle} onClick={closeMap}>
+              &times;
+            </span>
+          </div>
+        </div>
+  
+       
+      </div>
+ {/* //////////////////////////////////////////////////////////////// */}
                                             </div>
                                         </li>
-                                        <li class="order-lg-3">
+                                        <li class="order-lg-3 c">
                                             <div class="d-item_img">
                                                 <img class="img-fluid w-100" src="images/index/D-4.jpg" alt="D-4"/>
                                                 <img class="img-fluid w-100 d_item_hover_img"
@@ -994,9 +1108,31 @@ const Home = () => {
                                                     <a href="#">(8 Review)</a>
                                                 </div>
                                                 <p>&#8377;26.55 - &#8377;29.99</p>
+                                                                                                {/* ///////////////////////////// */}
+                                                                                                <div className='comparemainbuttonbox'>
+        {/* <h1>Google Maps Button</h1> */}
+        <button onClick={toggleMap} className='comparemainbutton'><i class="fas fa-balance-scale"></i></button>
+        <div style={mapContainerStyle} className="map-container-com">
+          <div style={mapOverlayStyle} className="map-overlay-com">
+            <iframe
+              style={mapIframeStyle}
+              src="https://pricehistoryapp.com/embed/apple-iphone-12-64gb-white-bc26"
+              frameBorder="0"
+              allowTransparency="true"
+              scrolling="no"
+            ></iframe>
+            <span style={closeButtonStyle} onClick={closeMap}>
+              &times;
+            </span>
+          </div>
+        </div>
+  
+       
+      </div>
+ {/* //////////////////////////////////////////////////////////////// */}
                                             </div>
                                         </li>
-                                        <li class="order-lg-4">
+                                        <li class="order-lg-4 c">
                                             <div class="d-item_img">
                                                 <img class="img-fluid w-100" src="images/index/D-5.jpg" alt="D-5"/>
                                                 
@@ -1013,9 +1149,31 @@ const Home = () => {
                                                     <a href="#">(4 Review)</a>
                                                 </div>
                                                 <p> &#8377;243.30 <del>&#8377;253.50 </del></p>
+                                                                                                {/* ///////////////////////////// */}
+                                                                                                <div className='comparemainbuttonbox'>
+        {/* <h1>Google Maps Button</h1> */}
+        <button onClick={toggleMap} className='comparemainbutton'><i class="fas fa-balance-scale"></i></button>
+        <div style={mapContainerStyle} className="map-container-com">
+          <div style={mapOverlayStyle} className="map-overlay-com">
+            <iframe
+              style={mapIframeStyle}
+              src="https://pricehistoryapp.com/embed/apple-iphone-12-64gb-white-bc26"
+              frameBorder="0"
+              allowTransparency="true"
+              scrolling="no"
+            ></iframe>
+            <span style={closeButtonStyle} onClick={closeMap}>
+              &times;
+            </span>
+          </div>
+        </div>
+  
+       
+      </div>
+ {/* //////////////////////////////////////////////////////////////// */}
                                             </div>
                                         </li>
-                                        <li class="order-lg-5">
+                                        <li class="order-lg-5 c">
                                             <div class="d-item_img">
                                                 <img class="img-fluid w-100" src="images/index/D-6.jpg" alt="D-6"/>
                                                 <img class="img-fluid w-100 d_item_hover_img"
@@ -1033,9 +1191,31 @@ const Home = () => {
                                                     <a href="#">(10 Review)</a>
                                                 </div>
                                                 <p>&#8377;32.00 - &#8377;33.26</p>
+                                                                                                {/* ///////////////////////////// */}
+                                                                                                <div className='comparemainbuttonbox'>
+        {/* <h1>Google Maps Button</h1> */}
+        <button onClick={toggleMap} className='comparemainbutton'><i class="fas fa-balance-scale"></i></button>
+        <div style={mapContainerStyle} className="map-container-com">
+          <div style={mapOverlayStyle} className="map-overlay-com">
+            <iframe
+              style={mapIframeStyle}
+              src="https://pricehistoryapp.com/embed/apple-iphone-12-64gb-white-bc26"
+              frameBorder="0"
+              allowTransparency="true"
+              scrolling="no"
+            ></iframe>
+            <span style={closeButtonStyle} onClick={closeMap}>
+              &times;
+            </span>
+          </div>
+        </div>
+  
+       
+      </div>
+ {/* //////////////////////////////////////////////////////////////// */}
                                             </div>
                                         </li>
-                                        <li class="order-lg-6">
+                                        <li class="order-lg-6 c">
                                             <div class="d-item_img">
                                                 <img class="img-fluid w-100" src="images/index/D-7.jpg" alt="D-7"/>
                                                 
@@ -1051,9 +1231,31 @@ const Home = () => {
                                                     <a href="#">(3 Review)</a>
                                                 </div>
                                                 <p>&#8377;53.00</p>
+                                                                                                {/* ///////////////////////////// */}
+                                                                                                <div className='comparemainbuttonbox'>
+        {/* <h1>Google Maps Button</h1> */}
+        <button onClick={toggleMap} className='comparemainbutton'><i class="fas fa-balance-scale"></i></button>
+        <div style={mapContainerStyle} className="map-container-com">
+          <div style={mapOverlayStyle} className="map-overlay-com">
+            <iframe
+              style={mapIframeStyle}
+              src="https://pricehistoryapp.com/embed/apple-iphone-12-64gb-white-bc26"
+              frameBorder="0"
+              allowTransparency="true"
+              scrolling="no"
+            ></iframe>
+            <span style={closeButtonStyle} onClick={closeMap}>
+              &times;
+            </span>
+          </div>
+        </div>
+  
+       
+      </div>
+ {/* //////////////////////////////////////////////////////////////// */}
                                             </div>
                                         </li>
-                                        <li class="order-lg-7">
+                                        <li class="order-lg-7 c">
                                             <div class="d-item_img">
                                                 <img class="img-fluid w-100" src="images/index/D-8.jpg" alt="D-8"/>
                                                 <img class="img-fluid w-100 d_item_hover_img"
@@ -1071,9 +1273,31 @@ const Home = () => {
                                                     <a href="#">(3 Review)</a>
                                                 </div>
                                                 <p>&#8377;45.90</p>
+                                                                                                {/* ///////////////////////////// */}
+                                                                                                <div className='comparemainbuttonbox'>
+        {/* <h1>Google Maps Button</h1> */}
+        <button onClick={toggleMap} className='comparemainbutton'><i class="fas fa-balance-scale"></i></button>
+        <div style={mapContainerStyle} className="map-container-com">
+          <div style={mapOverlayStyle} className="map-overlay-com">
+            <iframe
+              style={mapIframeStyle}
+              src="https://pricehistoryapp.com/embed/apple-iphone-12-64gb-white-bc26"
+              frameBorder="0"
+              allowTransparency="true"
+              scrolling="no"
+            ></iframe>
+            <span style={closeButtonStyle} onClick={closeMap}>
+              &times;
+            </span>
+          </div>
+        </div>
+  
+       
+      </div>
+ {/* //////////////////////////////////////////////////////////////// */}
                                             </div>
                                         </li>
-                                        <li class="order-lg-8">
+                                        <li class="order-lg-8 c">
                                             <div class="d-item_img">
                                                 <img class="img-fluid w-100" src="images/index/D-9.jpg" alt="D-9"/>
                                                 
@@ -1089,9 +1313,31 @@ const Home = () => {
                                                     <a href="#">(3 Review)</a>
                                                 </div>
                                                 <p>&#8377;53.00</p>
+                                                                                                {/* ///////////////////////////// */}
+                                                                                                <div className='comparemainbuttonbox'>
+        {/* <h1>Google Maps Button</h1> */}
+        <button onClick={toggleMap} className='comparemainbutton'><i class="fas fa-balance-scale"></i></button>
+        <div style={mapContainerStyle} className="map-container-com">
+          <div style={mapOverlayStyle} className="map-overlay-com">
+            <iframe
+              style={mapIframeStyle}
+              src="https://pricehistoryapp.com/embed/apple-iphone-12-64gb-white-bc26"
+              frameBorder="0"
+              allowTransparency="true"
+              scrolling="no"
+            ></iframe>
+            <span style={closeButtonStyle} onClick={closeMap}>
+              &times;
+            </span>
+          </div>
+        </div>
+  
+       
+      </div>
+ {/* //////////////////////////////////////////////////////////////// */}
                                             </div>
                                         </li>
-                                        <li class="order-lg-9">
+                                        <li class="order-lg-9 c">
                                             <div class="d-item_img">
                                                 <img class="img-fluid w-100" src="images/index/D-10.jpg" alt="D-10"/>
                                                 
@@ -1107,6 +1353,28 @@ const Home = () => {
                                                     <a href="#">(3 Review)</a>
                                                 </div>
                                                 <p>&#8377;173.84</p>
+                                                                                                {/* ///////////////////////////// */}
+                                                                                                <div className='comparemainbuttonbox'>
+        {/* <h1>Google Maps Button</h1> */}
+        <button onClick={toggleMap} className='comparemainbutton'><i class="fas fa-balance-scale"></i></button>
+        <div style={mapContainerStyle} className="map-container-com">
+          <div style={mapOverlayStyle} className="map-overlay-com">
+            <iframe
+              style={mapIframeStyle}
+              src="https://pricehistoryapp.com/embed/apple-iphone-12-64gb-white-bc26"
+              frameBorder="0"
+              allowTransparency="true"
+              scrolling="no"
+            ></iframe>
+            <span style={closeButtonStyle} onClick={closeMap}>
+              &times;
+            </span>
+          </div>
+        </div>
+  
+       
+      </div>
+ {/* //////////////////////////////////////////////////////////////// */}
                                             </div>
                                         </li>
                                     </ul>
@@ -1115,7 +1383,7 @@ const Home = () => {
                                 <div class="tab-pane fade" id="pills-seller" role="tabpanel"
                                     aria-labelledby="pills-seller-tab">
                                     <ul class="d-flex">
-                                        <li class="order-lg-0">
+                                        <li class="order-lg-0 c">
                                             <div class="d-item_img">
                                                 <img class="img-fluid w-100" src="images/index/D-1.jpg" alt="D-1"/>
                                                 <img class="img-fluid w-100 d_item_hover_img"
@@ -1133,9 +1401,31 @@ const Home = () => {
                                                     <a href="#">(1 Review)</a>
                                                 </div>
                                                 <p>&#8377;53.00</p>
+                                                                                                {/* ///////////////////////////// */}
+                                                                                                <div className='comparemainbuttonbox'>
+        {/* <h1>Google Maps Button</h1> */}
+        <button onClick={toggleMap} className='comparemainbutton'><i class="fas fa-balance-scale"></i></button>
+        <div style={mapContainerStyle} className="map-container-com">
+          <div style={mapOverlayStyle} className="map-overlay-com">
+            <iframe
+              style={mapIframeStyle}
+              src="https://pricehistoryapp.com/embed/apple-iphone-12-64gb-white-bc26"
+              frameBorder="0"
+              allowTransparency="true"
+              scrolling="no"
+            ></iframe>
+            <span style={closeButtonStyle} onClick={closeMap}>
+              &times;
+            </span>
+          </div>
+        </div>
+  
+       
+      </div>
+ {/* //////////////////////////////////////////////////////////////// */}
                                             </div>
                                         </li>
-                                        <li class="order-lg-2">
+                                        <li class="order-lg-2 c">
                                             <div class="d-item_img">
                                                 <img class="img-fluid w-100" src="images/index/D-2.jpg" alt="D-2"/>
                                                
@@ -1151,9 +1441,31 @@ const Home = () => {
                                                     <a href="#">(3 Review)</a>
                                                 </div>
                                                 <p>&#8377;26.62</p>
+                                                                                                {/* ///////////////////////////// */}
+                                                                                                <div className='comparemainbuttonbox'>
+        {/* <h1>Google Maps Button</h1> */}
+        <button onClick={toggleMap} className='comparemainbutton'><i class="fas fa-balance-scale"></i></button>
+        <div style={mapContainerStyle} className="map-container-com">
+          <div style={mapOverlayStyle} className="map-overlay-com">
+            <iframe
+              style={mapIframeStyle}
+              src="https://pricehistoryapp.com/embed/apple-iphone-12-64gb-white-bc26"
+              frameBorder="0"
+              allowTransparency="true"
+              scrolling="no"
+            ></iframe>
+            <span style={closeButtonStyle} onClick={closeMap}>
+              &times;
+            </span>
+          </div>
+        </div>
+  
+       
+      </div>
+ {/* //////////////////////////////////////////////////////////////// */}
                                             </div>
                                         </li>
-                                        <li class="order-lg-4">
+                                        <li class="order-lg-4 c">
                                             <div class="d-item_img">
                                                 <img class="img-fluid w-100" src="images/index/D-3.jpg" alt="D-3"/>
                                                 
@@ -1170,9 +1482,31 @@ const Home = () => {
                                                     <a href="#">(5 Review)</a>
                                                 </div>
                                                 <p>&#8377;136.26 <del>&#8377;145.90</del></p>
+                                                                                                {/* ///////////////////////////// */}
+                                                                                                <div className='comparemainbuttonbox'>
+        {/* <h1>Google Maps Button</h1> */}
+        <button onClick={toggleMap} className='comparemainbutton'><i class="fas fa-balance-scale"></i></button>
+        <div style={mapContainerStyle} className="map-container-com">
+          <div style={mapOverlayStyle} className="map-overlay-com">
+            <iframe
+              style={mapIframeStyle}
+              src="https://pricehistoryapp.com/embed/apple-iphone-12-64gb-white-bc26"
+              frameBorder="0"
+              allowTransparency="true"
+              scrolling="no"
+            ></iframe>
+            <span style={closeButtonStyle} onClick={closeMap}>
+              &times;
+            </span>
+          </div>
+        </div>
+  
+       
+      </div>
+ {/* //////////////////////////////////////////////////////////////// */}
                                             </div>
                                         </li>
-                                        <li class="order-lg-6">
+                                        <li class="order-lg-6 c">
                                             <div class="d-item_img">
                                                 <img class="img-fluid w-100" src="images/index/D-4.jpg" alt="D-4"/>
                                                 <img class="img-fluid w-100 d_item_hover_img"
@@ -1190,9 +1524,31 @@ const Home = () => {
                                                     <a href="#">(8 Review)</a>
                                                 </div>
                                                 <p>&#8377;26.55 - &#8377;29.99</p>
+                                                                                                {/* ///////////////////////////// */}
+                                                                                                <div className='comparemainbuttonbox'>
+        {/* <h1>Google Maps Button</h1> */}
+        <button onClick={toggleMap} className='comparemainbutton'><i class="fas fa-balance-scale"></i></button>
+        <div style={mapContainerStyle} className="map-container-com">
+          <div style={mapOverlayStyle} className="map-overlay-com">
+            <iframe
+              style={mapIframeStyle}
+              src="https://pricehistoryapp.com/embed/apple-iphone-12-64gb-white-bc26"
+              frameBorder="0"
+              allowTransparency="true"
+              scrolling="no"
+            ></iframe>
+            <span style={closeButtonStyle} onClick={closeMap}>
+              &times;
+            </span>
+          </div>
+        </div>
+  
+       
+      </div>
+ {/* //////////////////////////////////////////////////////////////// */}
                                             </div>
                                         </li>
-                                        <li class="order-lg-8">
+                                        <li class="order-lg-8 c">
                                             <div class="d-item_img">
                                                 <img class="img-fluid w-100" src="images/index/D-5.jpg" alt="D-5"/>
                                                 
@@ -1209,9 +1565,31 @@ const Home = () => {
                                                     <a href="#">(4 Review)</a>
                                                 </div>
                                                 <p> &#8377;243.30 <del>&#8377;253.50 </del></p>
+                                                                                                {/* ///////////////////////////// */}
+                                                                                                <div className='comparemainbuttonbox'>
+        {/* <h1>Google Maps Button</h1> */}
+        <button onClick={toggleMap} className='comparemainbutton'><i class="fas fa-balance-scale"></i></button>
+        <div style={mapContainerStyle} className="map-container-com">
+          <div style={mapOverlayStyle} className="map-overlay-com">
+            <iframe
+              style={mapIframeStyle}
+              src="https://pricehistoryapp.com/embed/apple-iphone-12-64gb-white-bc26"
+              frameBorder="0"
+              allowTransparency="true"
+              scrolling="no"
+            ></iframe>
+            <span style={closeButtonStyle} onClick={closeMap}>
+              &times;
+            </span>
+          </div>
+        </div>
+  
+       
+      </div>
+ {/* //////////////////////////////////////////////////////////////// */}
                                             </div>
                                         </li>
-                                        <li class="order-lg-1">
+                                        <li class="order-lg-1 c">
                                             <div class="d-item_img">
                                                 <img class="img-fluid w-100" src="images/index/D-6.jpg" alt="D-6"/>
                                                 <img class="img-fluid w-100 d_item_hover_img"
@@ -1229,9 +1607,31 @@ const Home = () => {
                                                     <a href="#">(10 Review)</a>
                                                 </div>
                                                 <p>&#8377;32.00 - &#8377;33.26</p>
+                                                                                                {/* ///////////////////////////// */}
+                                                                                                <div className='comparemainbuttonbox'>
+        {/* <h1>Google Maps Button</h1> */}
+        <button onClick={toggleMap} className='comparemainbutton'><i class="fas fa-balance-scale"></i></button>
+        <div style={mapContainerStyle} className="map-container-com">
+          <div style={mapOverlayStyle} className="map-overlay-com">
+            <iframe
+              style={mapIframeStyle}
+              src="https://pricehistoryapp.com/embed/apple-iphone-12-64gb-white-bc26"
+              frameBorder="0"
+              allowTransparency="true"
+              scrolling="no"
+            ></iframe>
+            <span style={closeButtonStyle} onClick={closeMap}>
+              &times;
+            </span>
+          </div>
+        </div>
+  
+       
+      </div>
+ {/* //////////////////////////////////////////////////////////////// */}
                                             </div>
                                         </li>
-                                        <li class="order-lg-3">
+                                        <li class="order-lg-3 c">
                                             <div class="d-item_img">
                                                 <img class="img-fluid w-100" src="images/index/D-7.jpg" alt="D-7"/>
                                                
@@ -1247,9 +1647,31 @@ const Home = () => {
                                                     <a href="#">(3 Review)</a>
                                                 </div>
                                                 <p>&#8377;53.00</p>
+                                                                                                {/* ///////////////////////////// */}
+                                                                                                <div className='comparemainbuttonbox'>
+        {/* <h1>Google Maps Button</h1> */}
+        <button onClick={toggleMap} className='comparemainbutton'><i class="fas fa-balance-scale"></i></button>
+        <div style={mapContainerStyle} className="map-container-com">
+          <div style={mapOverlayStyle} className="map-overlay-com">
+            <iframe
+              style={mapIframeStyle}
+              src="https://pricehistoryapp.com/embed/apple-iphone-12-64gb-white-bc26"
+              frameBorder="0"
+              allowTransparency="true"
+              scrolling="no"
+            ></iframe>
+            <span style={closeButtonStyle} onClick={closeMap}>
+              &times;
+            </span>
+          </div>
+        </div>
+  
+       
+      </div>
+ {/* //////////////////////////////////////////////////////////////// */}
                                             </div>
                                         </li>
-                                        <li class="order-lg-5">
+                                        <li class="order-lg-5 c">
                                             <div class="d-item_img">
                                                 <img class="img-fluid w-100" src="images/index/D-8.jpg" alt="D-8"/>
                                                 <img class="img-fluid w-100 d_item_hover_img"
@@ -1267,9 +1689,31 @@ const Home = () => {
                                                     <a href="#">(3 Review)</a>
                                                 </div>
                                                 <p>&#8377;45.90</p>
+                                                                                                {/* ///////////////////////////// */}
+                                                                                                <div className='comparemainbuttonbox'>
+        {/* <h1>Google Maps Button</h1> */}
+        <button onClick={toggleMap} className='comparemainbutton'><i class="fas fa-balance-scale"></i></button>
+        <div style={mapContainerStyle} className="map-container-com">
+          <div style={mapOverlayStyle} className="map-overlay-com">
+            <iframe
+              style={mapIframeStyle}
+              src="https://pricehistoryapp.com/embed/apple-iphone-12-64gb-white-bc26"
+              frameBorder="0"
+              allowTransparency="true"
+              scrolling="no"
+            ></iframe>
+            <span style={closeButtonStyle} onClick={closeMap}>
+              &times;
+            </span>
+          </div>
+        </div>
+  
+       
+      </div>
+ {/* //////////////////////////////////////////////////////////////// */}
                                             </div>
                                         </li>
-                                        <li class="order-lg-7">
+                                        <li class="order-lg-7 c">
                                             <div class="d-item_img">
                                                 <img class="img-fluid w-100" src="images/index/D-9.jpg" alt="D-9"/>
                                                
@@ -1285,9 +1729,31 @@ const Home = () => {
                                                     <a href="#">(3 Review)</a>
                                                 </div>
                                                 <p>&#8377;53.00</p>
+                                                                                                {/* ///////////////////////////// */}
+                                                                                                <div className='comparemainbuttonbox'>
+        {/* <h1>Google Maps Button</h1> */}
+        <button onClick={toggleMap} className='comparemainbutton'><i class="fas fa-balance-scale"></i></button>
+        <div style={mapContainerStyle} className="map-container-com">
+          <div style={mapOverlayStyle} className="map-overlay-com">
+            <iframe
+              style={mapIframeStyle}
+              src="https://pricehistoryapp.com/embed/apple-iphone-12-64gb-white-bc26"
+              frameBorder="0"
+              allowTransparency="true"
+              scrolling="no"
+            ></iframe>
+            <span style={closeButtonStyle} onClick={closeMap}>
+              &times;
+            </span>
+          </div>
+        </div>
+  
+       
+      </div>
+ {/* //////////////////////////////////////////////////////////////// */}
                                             </div>
                                         </li>
-                                        <li class="order-lg-9">
+                                        <li class="order-lg-9 c">
                                             <div class="d-item_img">
                                                 <img class="img-fluid w-100" src="images/index/D-10.jpg" alt="D-10"/>
                                                
@@ -1303,6 +1769,28 @@ const Home = () => {
                                                     <a href="#">(3 Review)</a>
                                                 </div>
                                                 <p>&#8377;173.84</p>
+                                                                                                {/* ///////////////////////////// */}
+                                                                                                <div className='comparemainbuttonbox'>
+        {/* <h1>Google Maps Button</h1> */}
+        <button onClick={toggleMap} className='comparemainbutton'><i class="fas fa-balance-scale"></i></button>
+        <div style={mapContainerStyle} className="map-container-com">
+          <div style={mapOverlayStyle} className="map-overlay-com">
+            <iframe
+              style={mapIframeStyle}
+              src="https://pricehistoryapp.com/embed/apple-iphone-12-64gb-white-bc26"
+              frameBorder="0"
+              allowTransparency="true"
+              scrolling="no"
+            ></iframe>
+            <span style={closeButtonStyle} onClick={closeMap}>
+              &times;
+            </span>
+          </div>
+        </div>
+  
+       
+      </div>
+ {/* //////////////////////////////////////////////////////////////// */}
                                             </div>
                                         </li>
                                     </ul>
@@ -1311,7 +1799,7 @@ const Home = () => {
                                 <div class="tab-pane fade" id="pills-popular" role="tabpanel"
                                     aria-labelledby="pills-popular-tab">
                                     <ul class="d-flex">
-                                        <li class="order-lg-1">
+                                        <li class="order-lg-1 c">
                                             <div class="d-item_img">
                                                 <img class="img-fluid w-100" src="images/index/D-1.jpg" alt="D-1"/>
                                                 <img class="img-fluid w-100 d_item_hover_img"
@@ -1329,9 +1817,31 @@ const Home = () => {
                                                     <a href="#">(1 Review)</a>
                                                 </div>
                                                 <p>&#8377;53.00</p>
+                                                                                                {/* ///////////////////////////// */}
+                                                                                                <div className='comparemainbuttonbox'>
+        {/* <h1>Google Maps Button</h1> */}
+        <button onClick={toggleMap} className='comparemainbutton'><i class="fas fa-balance-scale"></i></button>
+        <div style={mapContainerStyle} className="map-container-com">
+          <div style={mapOverlayStyle} className="map-overlay-com">
+            <iframe
+              style={mapIframeStyle}
+              src="https://pricehistoryapp.com/embed/apple-iphone-12-64gb-white-bc26"
+              frameBorder="0"
+              allowTransparency="true"
+              scrolling="no"
+            ></iframe>
+            <span style={closeButtonStyle} onClick={closeMap}>
+              &times;
+            </span>
+          </div>
+        </div>
+  
+       
+      </div>
+ {/* //////////////////////////////////////////////////////////////// */}
                                             </div>
                                         </li>
-                                        <li class="order-lg-3">
+                                        <li class="order-lg-3 c">
                                             <div class="d-item_img">
                                                 <img class="img-fluid w-100" src="images/index/D-2.jpg" alt="D-2"/>
                                               
@@ -1347,9 +1857,31 @@ const Home = () => {
                                                     <a href="#">(3 Review)</a>
                                                 </div>
                                                 <p>&#8377;26.62</p>
+                                                                                                {/* ///////////////////////////// */}
+                                                                                                <div className='comparemainbuttonbox'>
+        {/* <h1>Google Maps Button</h1> */}
+        <button onClick={toggleMap} className='comparemainbutton'><i class="fas fa-balance-scale"></i></button>
+        <div style={mapContainerStyle} className="map-container-com">
+          <div style={mapOverlayStyle} className="map-overlay-com">
+            <iframe
+              style={mapIframeStyle}
+              src="https://pricehistoryapp.com/embed/apple-iphone-12-64gb-white-bc26"
+              frameBorder="0"
+              allowTransparency="true"
+              scrolling="no"
+            ></iframe>
+            <span style={closeButtonStyle} onClick={closeMap}>
+              &times;
+            </span>
+          </div>
+        </div>
+  
+       
+      </div>
+ {/* //////////////////////////////////////////////////////////////// */}
                                             </div>
                                         </li>
-                                        <li class="order-lg-5">
+                                        <li class="order-lg-5 c">
                                             <div class="d-item_img">
                                                 <img class="img-fluid w-100" src="images/index/D-3.jpg" alt="D-3"/>
                                                
@@ -1366,9 +1898,31 @@ const Home = () => {
                                                     <a href="#">(5 Review)</a>
                                                 </div>
                                                 <p>&#8377;136.26 <del>&#8377;145.90</del></p>
+                                                                                                {/* ///////////////////////////// */}
+                                                                                                <div className='comparemainbuttonbox'>
+        {/* <h1>Google Maps Button</h1> */}
+        <button onClick={toggleMap} className='comparemainbutton'><i class="fas fa-balance-scale"></i></button>
+        <div style={mapContainerStyle} className="map-container-com">
+          <div style={mapOverlayStyle} className="map-overlay-com">
+            <iframe
+              style={mapIframeStyle}
+              src="https://pricehistoryapp.com/embed/apple-iphone-12-64gb-white-bc26"
+              frameBorder="0"
+              allowTransparency="true"
+              scrolling="no"
+            ></iframe>
+            <span style={closeButtonStyle} onClick={closeMap}>
+              &times;
+            </span>
+          </div>
+        </div>
+  
+       
+      </div>
+ {/* //////////////////////////////////////////////////////////////// */}
                                             </div>
                                         </li>
-                                        <li class="order-lg-7">
+                                        <li class="order-lg-7 c">
                                             <div class="d-item_img">
                                                 <img class="img-fluid w-100" src="images/index/D-4.jpg" alt="D-4"/>
                                                 <img class="img-fluid w-100 d_item_hover_img"
@@ -1386,9 +1940,31 @@ const Home = () => {
                                                     <a href="#">(8 Review)</a>
                                                 </div>
                                                 <p>&#8377;26.55 - &#8377;29.99</p>
+                                                                                                {/* ///////////////////////////// */}
+                                                                                                <div className='comparemainbuttonbox'>
+        {/* <h1>Google Maps Button</h1> */}
+        <button onClick={toggleMap} className='comparemainbutton'><i class="fas fa-balance-scale"></i></button>
+        <div style={mapContainerStyle} className="map-container-com">
+          <div style={mapOverlayStyle} className="map-overlay-com">
+            <iframe
+              style={mapIframeStyle}
+              src="https://pricehistoryapp.com/embed/apple-iphone-12-64gb-white-bc26"
+              frameBorder="0"
+              allowTransparency="true"
+              scrolling="no"
+            ></iframe>
+            <span style={closeButtonStyle} onClick={closeMap}>
+              &times;
+            </span>
+          </div>
+        </div>
+  
+       
+      </div>
+ {/* //////////////////////////////////////////////////////////////// */}
                                             </div>
                                         </li>
-                                        <li class="order-lg-9">
+                                        <li class="order-lg-9 c">
                                             <div class="d-item_img">
                                                 <img class="img-fluid w-100" src="images/index/D-5.jpg" alt="D-5"/>
                                                 
@@ -1405,9 +1981,31 @@ const Home = () => {
                                                     <a href="#">(4 Review)</a>
                                                 </div>
                                                 <p> &#8377;243.30 <del>&#8377;253.50 </del></p>
+                                                                                                {/* ///////////////////////////// */}
+                                                                                                <div className='comparemainbuttonbox'>
+        {/* <h1>Google Maps Button</h1> */}
+        <button onClick={toggleMap} className='comparemainbutton'><i class="fas fa-balance-scale"></i></button>
+        <div style={mapContainerStyle} className="map-container-com">
+          <div style={mapOverlayStyle} className="map-overlay-com">
+            <iframe
+              style={mapIframeStyle}
+              src="https://pricehistoryapp.com/embed/apple-iphone-12-64gb-white-bc26"
+              frameBorder="0"
+              allowTransparency="true"
+              scrolling="no"
+            ></iframe>
+            <span style={closeButtonStyle} onClick={closeMap}>
+              &times;
+            </span>
+          </div>
+        </div>
+  
+       
+      </div>
+ {/* //////////////////////////////////////////////////////////////// */}
                                             </div>
                                         </li>
-                                        <li class="order-lg-0">
+                                        <li class="order-lg-0 c">
                                             <div class="d-item_img">
                                                 <img class="img-fluid w-100" src="images/index/D-6.jpg" alt="D-6"/>
                                                 <img class="img-fluid w-100 d_item_hover_img"
@@ -1425,9 +2023,31 @@ const Home = () => {
                                                     <a href="#">(10 Review)</a>
                                                 </div>
                                                 <p>&#8377;32.00 - &#8377;33.26</p>
+                                                                                                {/* ///////////////////////////// */}
+                                                                                                <div className='comparemainbuttonbox'>
+        {/* <h1>Google Maps Button</h1> */}
+        <button onClick={toggleMap} className='comparemainbutton'><i class="fas fa-balance-scale"></i></button>
+        <div style={mapContainerStyle} className="map-container-com">
+          <div style={mapOverlayStyle} className="map-overlay-com">
+            <iframe
+              style={mapIframeStyle}
+              src="https://pricehistoryapp.com/embed/apple-iphone-12-64gb-white-bc26"
+              frameBorder="0"
+              allowTransparency="true"
+              scrolling="no"
+            ></iframe>
+            <span style={closeButtonStyle} onClick={closeMap}>
+              &times;
+            </span>
+          </div>
+        </div>
+  
+       
+      </div>
+ {/* //////////////////////////////////////////////////////////////// */}
                                             </div>
                                         </li>
-                                        <li class="order-lg-2">
+                                        <li class="order-lg-2 c">
                                             <div class="d-item_img">
                                                 <img class="img-fluid w-100" src="images/index/D-7.jpg" alt="D-7"/>
                                                 
@@ -1443,9 +2063,31 @@ const Home = () => {
                                                     <a href="#">(3 Review)</a>
                                                 </div>
                                                 <p>&#8377;53.00</p>
+                                                                                                {/* ///////////////////////////// */}
+                                                                                                <div className='comparemainbuttonbox'>
+        {/* <h1>Google Maps Button</h1> */}
+        <button onClick={toggleMap} className='comparemainbutton'><i class="fas fa-balance-scale"></i></button>
+        <div style={mapContainerStyle} className="map-container-com">
+          <div style={mapOverlayStyle} className="map-overlay-com">
+            <iframe
+              style={mapIframeStyle}
+              src="https://pricehistoryapp.com/embed/apple-iphone-12-64gb-white-bc26"
+              frameBorder="0"
+              allowTransparency="true"
+              scrolling="no"
+            ></iframe>
+            <span style={closeButtonStyle} onClick={closeMap}>
+              &times;
+            </span>
+          </div>
+        </div>
+  
+       
+      </div>
+ {/* //////////////////////////////////////////////////////////////// */}
                                             </div>
                                         </li>
-                                        <li class="order-lg-4">
+                                        <li class="order-lg-4 c">
                                             <div class="d-item_img">
                                                 <img class="img-fluid w-100" src="images/index/D-8.jpg" alt="D-8"/>
                                                 <img class="img-fluid w-100 d_item_hover_img"
@@ -1463,9 +2105,31 @@ const Home = () => {
                                                     <a href="#">(3 Review)</a>
                                                 </div>
                                                 <p>&#8377;45.90</p>
+                                                                                                {/* ///////////////////////////// */}
+                                                                                                <div className='comparemainbuttonbox'>
+        {/* <h1>Google Maps Button</h1> */}
+        <button onClick={toggleMap} className='comparemainbutton'><i class="fas fa-balance-scale"></i></button>
+        <div style={mapContainerStyle} className="map-container-com">
+          <div style={mapOverlayStyle} className="map-overlay-com">
+            <iframe
+              style={mapIframeStyle}
+              src="https://pricehistoryapp.com/embed/apple-iphone-12-64gb-white-bc26"
+              frameBorder="0"
+              allowTransparency="true"
+              scrolling="no"
+            ></iframe>
+            <span style={closeButtonStyle} onClick={closeMap}>
+              &times;
+            </span>
+          </div>
+        </div>
+  
+       
+      </div>
+ {/* //////////////////////////////////////////////////////////////// */}
                                             </div>
                                         </li>
-                                        <li class="order-lg-6">
+                                        <li class="order-lg-6 c">
                                             <div class="d-item_img">
                                                 <img class="img-fluid w-100" src="images/index/D-9.jpg" alt="D-9"/>
                                                 
@@ -1481,9 +2145,31 @@ const Home = () => {
                                                     <a href="#">(3 Review)</a>
                                                 </div>
                                                 <p>&#8377;53.00</p>
+                                                                                                {/* ///////////////////////////// */}
+                                                                                                <div className='comparemainbuttonbox'>
+        {/* <h1>Google Maps Button</h1> */}
+        <button onClick={toggleMap} className='comparemainbutton'><i class="fas fa-balance-scale"></i></button>
+        <div style={mapContainerStyle} className="map-container-com">
+          <div style={mapOverlayStyle} className="map-overlay-com">
+            <iframe
+              style={mapIframeStyle}
+              src="https://pricehistoryapp.com/embed/apple-iphone-12-64gb-white-bc26"
+              frameBorder="0"
+              allowTransparency="true"
+              scrolling="no"
+            ></iframe>
+            <span style={closeButtonStyle} onClick={closeMap}>
+              &times;
+            </span>
+          </div>
+        </div>
+  
+       
+      </div>
+ {/* //////////////////////////////////////////////////////////////// */}
                                             </div>
                                         </li>
-                                        <li class="order-lg-8">
+                                        <li class="order-lg-8 c">
                                             <div class="d-item_img">
                                                 <img class="img-fluid w-100" src="images/index/D-10.jpg" alt="D-10"/>
                                                
@@ -1499,6 +2185,28 @@ const Home = () => {
                                                     <a href="#">(3 Review)</a>
                                                 </div>
                                                 <p>&#8377;173.84</p>
+                                                                                                {/* ///////////////////////////// */}
+                                                                                                <div className='comparemainbuttonbox'>
+        {/* <h1>Google Maps Button</h1> */}
+        <button onClick={toggleMap} className='comparemainbutton'><i class="fas fa-balance-scale"></i></button>
+        <div style={mapContainerStyle} className="map-container-com">
+          <div style={mapOverlayStyle} className="map-overlay-com">
+            <iframe
+              style={mapIframeStyle}
+              src="https://pricehistoryapp.com/embed/apple-iphone-12-64gb-white-bc26"
+              frameBorder="0"
+              allowTransparency="true"
+              scrolling="no"
+            ></iframe>
+            <span style={closeButtonStyle} onClick={closeMap}>
+              &times;
+            </span>
+          </div>
+        </div>
+  
+       
+      </div>
+ {/* //////////////////////////////////////////////////////////////// */}
                                             </div>
                                         </li>
                                     </ul>
@@ -1507,7 +2215,7 @@ const Home = () => {
                                 <div class="tab-pane fade" id="pills-featured" role="tabpanel"
                                     aria-labelledby="pills-featured-tab">
                                     <ul class="d-flex">
-                                        <li class="order-lg-9">
+                                        <li class="order-lg-9 c">
                                             <div class="d-item_img">
                                                 <img class="img-fluid w-100" src="images/index/D-1.jpg" alt="D-1"/>
                                                 <img class="img-fluid w-100 d_item_hover_img"
@@ -1525,9 +2233,31 @@ const Home = () => {
                                                     <a href="#">(1 Review)</a>
                                                 </div>
                                                 <p>&#8377;53.00</p>
+                                                                                                {/* ///////////////////////////// */}
+                                                                                                <div className='comparemainbuttonbox'>
+        {/* <h1>Google Maps Button</h1> */}
+        <button onClick={toggleMap} className='comparemainbutton'><i class="fas fa-balance-scale"></i></button>
+        <div style={mapContainerStyle} className="map-container-com">
+          <div style={mapOverlayStyle} className="map-overlay-com">
+            <iframe
+              style={mapIframeStyle}
+              src="https://pricehistoryapp.com/embed/apple-iphone-12-64gb-white-bc26"
+              frameBorder="0"
+              allowTransparency="true"
+              scrolling="no"
+            ></iframe>
+            <span style={closeButtonStyle} onClick={closeMap}>
+              &times;
+            </span>
+          </div>
+        </div>
+  
+       
+      </div>
+ {/* //////////////////////////////////////////////////////////////// */}
                                             </div>
                                         </li>
-                                        <li class="order-lg-8">
+                                        <li class="order-lg-8 c">
                                             <div class="d-item_img">
                                                 <img class="img-fluid w-100" src="images/index/D-2.jpg" alt="D-2"/>
                                                 
@@ -1543,9 +2273,31 @@ const Home = () => {
                                                     <a href="#">(3 Review)</a>
                                                 </div>
                                                 <p>&#8377;26.62</p>
+                                                                                                {/* ///////////////////////////// */}
+                                                                                                <div className='comparemainbuttonbox'>
+        {/* <h1>Google Maps Button</h1> */}
+        <button onClick={toggleMap} className='comparemainbutton'><i class="fas fa-balance-scale"></i></button>
+        <div style={mapContainerStyle} className="map-container-com">
+          <div style={mapOverlayStyle} className="map-overlay-com">
+            <iframe
+              style={mapIframeStyle}
+              src="https://pricehistoryapp.com/embed/apple-iphone-12-64gb-white-bc26"
+              frameBorder="0"
+              allowTransparency="true"
+              scrolling="no"
+            ></iframe>
+            <span style={closeButtonStyle} onClick={closeMap}>
+              &times;
+            </span>
+          </div>
+        </div>
+  
+       
+      </div>
+ {/* //////////////////////////////////////////////////////////////// */}
                                             </div>
                                         </li>
-                                        <li class="order-lg-7">
+                                        <li class="order-lg-7 c">
                                             <div class="d-item_img">
                                                 <img class="img-fluid w-100" src="images/index/D-3.jpg" alt="D-3"/>
                                                 
@@ -1562,9 +2314,31 @@ const Home = () => {
                                                     <a href="#">(5 Review)</a>
                                                 </div>
                                                 <p>&#8377;136.26 <del>&#8377;145.90</del></p>
+                                                                                                {/* ///////////////////////////// */}
+                                                                                                <div className='comparemainbuttonbox'>
+        {/* <h1>Google Maps Button</h1> */}
+        <button onClick={toggleMap} className='comparemainbutton'><i class="fas fa-balance-scale"></i></button>
+        <div style={mapContainerStyle} className="map-container-com">
+          <div style={mapOverlayStyle} className="map-overlay-com">
+            <iframe
+              style={mapIframeStyle}
+              src="https://pricehistoryapp.com/embed/apple-iphone-12-64gb-white-bc26"
+              frameBorder="0"
+              allowTransparency="true"
+              scrolling="no"
+            ></iframe>
+            <span style={closeButtonStyle} onClick={closeMap}>
+              &times;
+            </span>
+          </div>
+        </div>
+  
+       
+      </div>
+ {/* //////////////////////////////////////////////////////////////// */}
                                             </div>
                                         </li>
-                                        <li class="order-lg-6">
+                                        <li class="order-lg-6 c">
                                             <div class="d-item_img">
                                                 <img class="img-fluid w-100" src="images/index/D-4.jpg" alt="D-4"/>
                                                 <img class="img-fluid w-100 d_item_hover_img"
@@ -1582,9 +2356,31 @@ const Home = () => {
                                                     <a href="#">(8 Review)</a>
                                                 </div>
                                                 <p>&#8377;26.55 - &#8377;29.99</p>
+                                                                                                {/* ///////////////////////////// */}
+                                                                                                <div className='comparemainbuttonbox'>
+        {/* <h1>Google Maps Button</h1> */}
+        <button onClick={toggleMap} className='comparemainbutton'><i class="fas fa-balance-scale"></i></button>
+        <div style={mapContainerStyle} className="map-container-com">
+          <div style={mapOverlayStyle} className="map-overlay-com">
+            <iframe
+              style={mapIframeStyle}
+              src="https://pricehistoryapp.com/embed/apple-iphone-12-64gb-white-bc26"
+              frameBorder="0"
+              allowTransparency="true"
+              scrolling="no"
+            ></iframe>
+            <span style={closeButtonStyle} onClick={closeMap}>
+              &times;
+            </span>
+          </div>
+        </div>
+  
+       
+      </div>
+ {/* //////////////////////////////////////////////////////////////// */}
                                             </div>
                                         </li>
-                                        <li class="order-lg-5">
+                                        <li class="order-lg-5 c">
                                             <div class="d-item_img">
                                                 <img class="img-fluid w-100" src="images/index/D-5.jpg" alt="D-5"/>
                                                 
@@ -1601,9 +2397,31 @@ const Home = () => {
                                                     <a href="#">(4 Review)</a>
                                                 </div>
                                                 <p> &#8377;243.30 <del>&#8377;253.50 </del></p>
+                                                                                                {/* ///////////////////////////// */}
+                                                                                                <div className='comparemainbuttonbox'>
+        {/* <h1>Google Maps Button</h1> */}
+        <button onClick={toggleMap} className='comparemainbutton'><i class="fas fa-balance-scale"></i></button>
+        <div style={mapContainerStyle} className="map-container-com">
+          <div style={mapOverlayStyle} className="map-overlay-com">
+            <iframe
+              style={mapIframeStyle}
+              src="https://pricehistoryapp.com/embed/apple-iphone-12-64gb-white-bc26"
+              frameBorder="0"
+              allowTransparency="true"
+              scrolling="no"
+            ></iframe>
+            <span style={closeButtonStyle} onClick={closeMap}>
+              &times;
+            </span>
+          </div>
+        </div>
+  
+       
+      </div>
+ {/* //////////////////////////////////////////////////////////////// */}
                                             </div>
                                         </li>
-                                        <li class="order-lg-4">
+                                        <li class="order-lg-4 c">
                                             <div class="d-item_img">
                                                 <img class="img-fluid w-100" src="images/index/D-6.jpg" alt="D-6"/>
                                                 <img class="img-fluid w-100 d_item_hover_img"
@@ -1621,9 +2439,31 @@ const Home = () => {
                                                     <a href="#">(10 Review)</a>
                                                 </div>
                                                 <p>&#8377;32.00 - &#8377;33.26</p>
+                                                                                                {/* ///////////////////////////// */}
+                                                                                                <div className='comparemainbuttonbox'>
+        {/* <h1>Google Maps Button</h1> */}
+        <button onClick={toggleMap} className='comparemainbutton'><i class="fas fa-balance-scale"></i></button>
+        <div style={mapContainerStyle} className="map-container-com">
+          <div style={mapOverlayStyle} className="map-overlay-com">
+            <iframe
+              style={mapIframeStyle}
+              src="https://pricehistoryapp.com/embed/apple-iphone-12-64gb-white-bc26"
+              frameBorder="0"
+              allowTransparency="true"
+              scrolling="no"
+            ></iframe>
+            <span style={closeButtonStyle} onClick={closeMap}>
+              &times;
+            </span>
+          </div>
+        </div>
+  
+       
+      </div>
+ {/* //////////////////////////////////////////////////////////////// */}
                                             </div>
                                         </li>
-                                        <li class="order-lg-3">
+                                        <li class="order-lg-3 c">
                                             <div class="d-item_img">
                                                 <img class="img-fluid w-100" src="images/index/D-7.jpg" alt="D-7"/>
                                                
@@ -1639,9 +2479,31 @@ const Home = () => {
                                                     <a href="#">(3 Review)</a>
                                                 </div>
                                                 <p>&#8377;53.00</p>
+                                                                                                {/* ///////////////////////////// */}
+                                                                                                <div className='comparemainbuttonbox'>
+        {/* <h1>Google Maps Button</h1> */}
+        <button onClick={toggleMap} className='comparemainbutton'><i class="fas fa-balance-scale"></i></button>
+        <div style={mapContainerStyle} className="map-container-com">
+          <div style={mapOverlayStyle} className="map-overlay-com">
+            <iframe
+              style={mapIframeStyle}
+              src="https://pricehistoryapp.com/embed/apple-iphone-12-64gb-white-bc26"
+              frameBorder="0"
+              allowTransparency="true"
+              scrolling="no"
+            ></iframe>
+            <span style={closeButtonStyle} onClick={closeMap}>
+              &times;
+            </span>
+          </div>
+        </div>
+  
+       
+      </div>
+ {/* //////////////////////////////////////////////////////////////// */}
                                             </div>
                                         </li>
-                                        <li class="order-lg-2">
+                                        <li class="order-lg-2 c">
                                             <div class="d-item_img">
                                                 <img class="img-fluid w-100" src="images/index/D-8.jpg" alt="D-8"/>
                                                 <img class="img-fluid w-100 d_item_hover_img"
@@ -1659,9 +2521,31 @@ const Home = () => {
                                                     <a href="#">(3 Review)</a>
                                                 </div>
                                                 <p>&#8377;45.90</p>
+                                                                                                {/* ///////////////////////////// */}
+                                                                                                <div className='comparemainbuttonbox'>
+        {/* <h1>Google Maps Button</h1> */}
+        <button onClick={toggleMap} className='comparemainbutton'><i class="fas fa-balance-scale"></i></button>
+        <div style={mapContainerStyle} className="map-container-com">
+          <div style={mapOverlayStyle} className="map-overlay-com">
+            <iframe
+              style={mapIframeStyle}
+              src="https://pricehistoryapp.com/embed/apple-iphone-12-64gb-white-bc26"
+              frameBorder="0"
+              allowTransparency="true"
+              scrolling="no"
+            ></iframe>
+            <span style={closeButtonStyle} onClick={closeMap}>
+              &times;
+            </span>
+          </div>
+        </div>
+  
+       
+      </div>
+ {/* //////////////////////////////////////////////////////////////// */}
                                             </div>
                                         </li>
-                                        <li class="order-lg-1">
+                                        <li class="order-lg-1 c">
                                             <div class="d-item_img">
                                                 <img class="img-fluid w-100" src="images/index/D-9.jpg" alt="D-9"/>
                                                
@@ -1677,9 +2561,31 @@ const Home = () => {
                                                     <a href="#">(3 Review)</a>
                                                 </div>
                                                 <p>&#8377;53.00</p>
+                                                                                                {/* ///////////////////////////// */}
+                                                                                                <div className='comparemainbuttonbox'>
+        {/* <h1>Google Maps Button</h1> */}
+        <button onClick={toggleMap} className='comparemainbutton'><i class="fas fa-balance-scale"></i></button>
+        <div style={mapContainerStyle} className="map-container-com">
+          <div style={mapOverlayStyle} className="map-overlay-com">
+            <iframe
+              style={mapIframeStyle}
+              src="https://pricehistoryapp.com/embed/apple-iphone-12-64gb-white-bc26"
+              frameBorder="0"
+              allowTransparency="true"
+              scrolling="no"
+            ></iframe>
+            <span style={closeButtonStyle} onClick={closeMap}>
+              &times;
+            </span>
+          </div>
+        </div>
+  
+       
+      </div>
+ {/* //////////////////////////////////////////////////////////////// */}
                                             </div>
                                         </li>
-                                        <li class="order-lg-0">
+                                        <li class="order-lg-0 c">
                                             <div class="d-item_img">
                                                 <img class="img-fluid w-100" src="images/index/D-10.jpg" alt="D-10"/>
                                                
@@ -1695,6 +2601,28 @@ const Home = () => {
                                                     <a href="#">(3 Review)</a>
                                                 </div>
                                                 <p>&#8377;173.84</p>
+                                                                                                {/* ///////////////////////////// */}
+                                                                                                <div className='comparemainbuttonbox'>
+        {/* <h1>Google Maps Button</h1> */}
+        <button onClick={toggleMap} className='comparemainbutton'><i class="fas fa-balance-scale"></i></button>
+        <div style={mapContainerStyle} className="map-container-com">
+          <div style={mapOverlayStyle} className="map-overlay-com">
+            <iframe
+              style={mapIframeStyle}
+              src="https://pricehistoryapp.com/embed/apple-iphone-12-64gb-white-bc26"
+              frameBorder="0"
+              allowTransparency="true"
+              scrolling="no"
+            ></iframe>
+            <span style={closeButtonStyle} onClick={closeMap}>
+              &times;
+            </span>
+          </div>
+        </div>
+  
+       
+      </div>
+ {/* //////////////////////////////////////////////////////////////// */}
                                             </div>
                                         </li>
                                     </ul>
