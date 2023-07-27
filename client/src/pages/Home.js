@@ -5,17 +5,11 @@ import $ from 'jquery';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-// import "slick-carousel/slick/slick.css";
-// import "slick-carousel/slick/slick-theme.css";
-
-// import Layout from "./../components/Layout/Layout";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-// import { Checkbox, Radio } from "antd";
-// import { Prices } from "../components/Price";
 import { useCart } from "../context/cart";
-import { toast } from "react-hot-toast";
-import { FiCompare } from 'react-icons/fi';
+// import { toast } from "react-hot-toast";
+// import { FiCompare } from 'react-icons/fi';
 
 const Home = () => {
   
@@ -2723,7 +2717,7 @@ const Home = () => {
         <button onClick={toggleMap} className='comparemainbutton'><i class="fas fa-balance-scale"></i></button>
         <button onClick={toggleMap} className='comparemainbutton'><i class="fas fa-balance-scale"></i></button>
 
-        
+
         <div style={mapContainerStyle} className="map-container-com">
           <div style={mapOverlayStyle} className="map-overlay-com">
             <iframe
