@@ -2721,6 +2721,9 @@ const Home = () => {
                                                                                                                                             <div className='comparemainbuttonbox'>
         {/* <h1>Google Maps Button</h1> */}
         <button onClick={toggleMap} className='comparemainbutton'><i class="fas fa-balance-scale"></i></button>
+        <button onClick={toggleMap} className='comparemainbutton'><i class="fas fa-balance-scale"></i></button>
+
+        
         <div style={mapContainerStyle} className="map-container-com">
           <div style={mapOverlayStyle} className="map-overlay-com">
             <iframe
