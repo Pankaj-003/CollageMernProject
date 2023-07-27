@@ -1103,3 +1103,25 @@ display: none;
 }
 }
 /* @media(ma) */
+
+/* chartjs style */
+.HighestLowest {
+  /* border: 1px solid red; */
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.firstyearhighestlowest {
+  margin: 10px;
+  font-weight: 600;
+}
+
+.maincanvas {
+  width: 80%;
+  margin: 20px auto;
+}
+.maingraphbox{
+  border: 1px solid red;
+}
