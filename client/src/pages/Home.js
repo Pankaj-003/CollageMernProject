@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useMemo } from 'react';
+import React, { useEffect, useState, useMemo,useRef } from 'react';
 import Layout from '../components/Layout/Layout'
 import 'jquery-ui-dist/jquery-ui';
 import $ from 'jquery';
@@ -8,11 +8,13 @@ import 'slick-carousel/slick/slick-theme.css';
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { useCart } from "../context/cart";
-// import { toast } from "react-hot-toast";
-// import { FiCompare } from 'react-icons/fi';
-
+// import ProductLineChart from '../components/ProductLineChart';
+import { Chart } from 'chart.js';
+// import React, { useEffect, useRef } from 'react';
 const Home = () => {
-  
+  // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+  // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     const [mapVisible, setMapVisible] = useState(false);
   
     const toggleMap = () => {
@@ -980,8 +982,10 @@ const Home = () => {
                                                 </div>
                                                 <p>&#8377;53.00</p>
                                                 {/* ///////////////////////////// */}
+       
+       
                                                 <div className='comparemainbuttonbox'>
-        {/* <h1>Google Maps Button</h1> */}
+     
         <button onClick={toggleMap} className='comparemainbutton'><i class="fas fa-balance-scale"></i></button>
         <div style={mapContainerStyle} className="map-container-com">
           <div style={mapOverlayStyle} className="map-overlay-com">
@@ -997,9 +1001,11 @@ const Home = () => {
             </span>
           </div>
         </div>
-  
-       
+        {/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */}
+        <button  className='comparemainbutton'><i class="fas fa-balance-scale"></i></button>
+    {/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */}
       </div>
+    
  {/* //////////////////////////////////////////////////////////////// */}
                                             </div>
                                         </li>

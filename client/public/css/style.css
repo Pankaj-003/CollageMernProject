@@ -2041,3 +2041,6 @@ display: none;
 #category_banner .category_banner_img_four .ovrly a, #category_banner .category_banner_img_three .ovrly a {
   font-size: 11px;}
 }
+.ant-checkbox-wrapper:first-of-type {
+  margin-left: 0px;
+}

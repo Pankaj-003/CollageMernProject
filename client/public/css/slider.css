@@ -153,3 +153,30 @@ height: 140px;
 .contact-form-title{
   text-align: center;
 }
+.ant-checkbox-wrapper:first-of-type {
+  margin-left: 0px;
+
+}
+.HighestLowest {
+  /* border: 1px solid red; */
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.firstyearhighestlowest {
+  margin: 10px;
+  font-weight: 600;
+}
+
+.maincanvas {
+  width: 80%;
+  margin: 20px auto;
+}
+.maingraphbox{
+  border: 1px solid rgb(184, 184, 184);
+}
+/* The rest of the CSS styles from the previous code snippet */
+/* Add this style to create the blurred background overlay */
+
