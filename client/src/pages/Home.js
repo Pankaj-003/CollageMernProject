@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useMemo,useRef } from 'react';
+// import React, { useEffect, useState } from 'react';
 import Layout from '../components/Layout/Layout'
 import 'jquery-ui-dist/jquery-ui';
 import $ from 'jquery';
@@ -8,12 +9,16 @@ import 'slick-carousel/slick/slick-theme.css';
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { useCart } from "../context/cart";
-// import ProductLineChart from '../components/ProductLineChart';
-import { Chart } from 'chart.js';
-// import React, { useEffect, useRef } from 'react';
+// import { Line } from 'react-chartjs-2';
+// import { Bar } from 'react-chartjs-2';
+// import { format } from 'date-fns';
+
 const Home = () => {
   // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
+
+  
+  
   // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     const [mapVisible, setMapVisible] = useState(false);
   
@@ -28,9 +33,9 @@ const Home = () => {
     const mapContainerStyle = {
       position: 'fixed',
       top: 0,
-      left: 0,
+      left: 0, 
       width: '100%',
-      height: '100%',
+      height: '100%', 
       zIndex: 9999,
       display: mapVisible ? 'block' : 'none',
       backdropFilter: 'blur(5px)',
@@ -1002,7 +1007,7 @@ const Home = () => {
           </div>
         </div>
         {/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */}
-        <button  className='comparemainbutton'><i class="fas fa-balance-scale"></i></button>
+
     {/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */}
       </div>
     
